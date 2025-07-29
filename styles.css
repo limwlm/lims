@@ -119,10 +119,14 @@ body {
 
 .logo {
   font-family: var(--font-title);
-  font-size: 1.75rem;
-  font-weight: 650;
-  letter-spacing: 0.25px;
+  font-size: 1.75rem;        /* plus grand : 28px */
+  font-weight: 700;          /* plus gras pour donner du poids visuel */
+  letter-spacing: 1px;       /* plus d’espace entre les lettres */
+  text-transform: uppercase; /* tout en majuscules pour impact visuel */
+  color: var(--color-text);  /* reste dans la palette du site */
+  user-select: none;         /* empêche de sélectionner le texte (effet plus net) */
 }
+
 
 
 .nav-links {
