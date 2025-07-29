@@ -73,23 +73,41 @@ body {
 }
 
 .btn {
-  background-color: var(--color-accent);
-  color: var(--color-text);
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-weight: 500;
+  background-color: var(--color-accent); /* Jaune moderne */
+  color: var(--color-text);              /* Vert profond */
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;                  /* Capsule ultra arrondie */
+  font-weight: 600;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* ombre douce */
+  transition: all 0.25s ease-in-out;
+  font-size: 1rem;
+  cursor: pointer;
+  gap: 0.5rem;
 }
 
 .btn:hover {
-  background-color: #e0c74e;
+  background-color: #e6c843;             /* Légèrement plus foncé */
+  transform: translateY(-2px);           /* Effet "lévitation" */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 
 .navbar {
   background-color: var(--color-bg);
   border-bottom: 1px solid #ccc;
   padding: 0.6rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  color: var(--color-text);
+  text-decoration: none;
 }
 
 .navbar-container {
@@ -101,8 +119,11 @@ body {
 
 .logo {
   font-family: var(--font-title);
-  font-size: 1.25rem;
+  font-size: 1.75rem;
+  font-weight: 650;
+  letter-spacing: 0.25px;
 }
+
 
 .nav-links {
   display: flex;
@@ -110,9 +131,16 @@ body {
 }
 
 .nav-links a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-size: 1rem;
   color: var(--color-text);
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #2c4734; /* Un vert un peu plus foncé */
 }
 
 .hero {
