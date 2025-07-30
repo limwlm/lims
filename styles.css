@@ -145,7 +145,7 @@ body {
   background-image: url('restaurant.png');
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -300,7 +300,6 @@ h2,
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: left;
-  padding: 0 2rem;
   color: var(--color-text);
 }
 
