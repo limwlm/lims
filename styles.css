@@ -4,7 +4,7 @@
   --color-bg: #e6d8b5;
   --color-text: #2f4631;
   --color-accent: #f4c542;
-  --color-hero-text: #f1f1f1;
+  --color-hero-text: #fdfcf9;
   --font-title: 'Libre Baskerville', serif;
   --font-body: 'Inter', sans-serif;
   --font-hero: 'Lora', serif;
@@ -23,7 +23,6 @@ body {
   line-height: 1.5;
 }
 
-/* === Container & Sections === */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -43,11 +42,10 @@ body {
   text-align: center;
 }
 
-/* === Button === */
 .btn {
   background-color: var(--color-accent);
   color: var(--color-text);
-  padding: 0.9rem 1.8rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
@@ -56,10 +54,9 @@ body {
   justify-content: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.25s ease-in-out;
-  font-size: 1.15rem;
+  font-size: 1rem;
   cursor: pointer;
   gap: 0.5rem;
-  flex-shrink: 0;
   white-space: nowrap;
 }
 
@@ -74,9 +71,8 @@ body {
   background-color: var(--color-bg);
   padding: 0.6rem 0;
   position: sticky;
-  font-weight: 570;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 }
 
 .navbar a {
@@ -89,7 +85,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  min-width: 0;
   overflow: hidden;
 }
 
@@ -124,8 +119,6 @@ body {
 .nav-items a {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  color: var(--color-text);
   font-size: 1rem;
   white-space: nowrap;
   transition: all 0.2s ease-in-out;
@@ -141,21 +134,59 @@ body {
   background-image: url('restaurant.png');
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 90vh;
   position: relative;
   display: flex;
   align-items: center;
+  overflow: hidden;
+}
+
+/* Dégradé haut + bas depuis l'intérieur de .hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg) 0%,
+    rgba(0, 0, 0, 0.3) 20%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.05) 70%,
+    transparent 80%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Dégradé bas discret */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent 0%, var(--color-bg) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
+  padding-bottom: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 3;
   max-width: 700px;
   margin-left: 2rem;
 }
@@ -163,10 +194,18 @@ body {
 .hero-content h1 {
   color: var(--color-hero-text);
   font-family: var(--font-title);
-  font-size: 2.8rem;
+  font-size: 3rem;
   line-height: 1.3;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content .subheading {
+  font-size: 1.6rem;
+  font-family: var(--font-hero);
+  color: var(--color-hero-text);
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .hero-content p {
@@ -192,7 +231,11 @@ body {
   }
 
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
+  }
+
+  .hero-content .subheading {
+    font-size: 1.3rem;
   }
 
   .hero-content p {
@@ -201,7 +244,7 @@ body {
 
   .btn {
     font-size: 1rem;
-    padding: 0.7rem 1.4rem;
+    padding: 0.6rem 1.2rem;
   }
 }
 
