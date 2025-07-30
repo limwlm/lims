@@ -10,6 +10,7 @@
   --font-hero: 'Lora', serif;
 }
 
+/* ========== BASE ========== */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +27,7 @@ body {
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 2rem;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
@@ -34,31 +35,53 @@ body {
   padding: 4rem 0;
 }
 
-.card {
-  background-color: var(--color-bg);
-  padding: 1.5rem;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  text-align: center;
+/* ========== TEXTES & TITRES ========== */
+h1, h2, h3, .section-title, .lead {
+  text-align: left;
 }
 
-/* === BOUTONS === */
+h1 {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  color: var(--color-hero-text);
+  line-height: 1.3;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+h2,
+.section-title {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+.lead {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 3;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  margin-top: 1rem;
+}
+
+/* ========== BOUTONS ========== */
 .btn {
   background-color: var(--color-accent);
   color: var(--color-text);
   padding: 0.8rem 1.6rem;
   border-radius: 999px;
   font-weight: 700;
-  text-decoration: none;
+  font-size: 1.1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
-  cursor: pointer;
   gap: 0.5rem;
+  cursor: pointer;
   white-space: nowrap;
   transform: scale(1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .btn:hover,
@@ -69,7 +92,7 @@ body {
   outline: none;
 }
 
-/* === NAVBAR === */
+/* ========== NAVBAR ========== */
 .navbar {
   background-color: var(--color-bg);
   padding: 0.25rem 0;
@@ -106,23 +129,18 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding-top: 2px;
-  flex-wrap: nowrap;
-  overflow: hidden;
 }
 
 .nav-items {
   display: flex;
   gap: 1.5rem;
   flex-wrap: nowrap;
-  overflow: hidden;
-  flex-grow: 1;
 }
 
 .nav-items a {
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  font-size: 1rem;
   white-space: nowrap;
   transition: color 0.2s ease-in-out;
 }
@@ -136,19 +154,17 @@ body {
   padding: 0.65rem 1.6rem;
   font-size: 1.05rem;
   font-weight: 700;
-  margin-top: 2px;
-  margin-bottom: 2px;
 }
 
-/* === HERO === */
+/* ========== HERO ========== */
 .hero {
   background-image: url('restaurant.png');
   background-size: cover;
   background-position: center;
   height: 60vh;
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
   overflow: hidden;
 }
 
@@ -163,20 +179,9 @@ body {
 }
 
 .hero-content {
-  position: relative;
-  z-index: 3;
-  max-width: 700px;
-  margin-left: 8.5rem;
-  margin-top: -3rem; 
-}
-
-.hero-content h1 {
-  color: var(--color-hero-text);
-  font-family: var(--font-title);
-  font-size: 3rem;
-  line-height: 1.3;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin-left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .hero-content .subheading {
@@ -188,28 +193,24 @@ body {
 }
 
 .hero-content p {
-  color: var(--color-hero-text);
   font-family: var(--font-hero);
   font-size: 1.25rem;
   line-height: 1.6;
+  color: var(--color-hero-text);
   margin-bottom: 2.5rem;
 }
 
-/* === PLATS SIGNATURES === */
-
+/* ========== PLATS SIGNATURES ========== */
 .plats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
 .plat {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.5rem;
-  border-radius: 12px;
   background-color: var(--color-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
@@ -217,20 +218,19 @@ body {
   animation: fadeUp 0.8s ease forwards;
 }
 
+.plat img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
 .plat:hover {
   transform: translateY(-5px) scale(1.01);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-}
-
-.plat img {
-  width: 100%;
-  max-height: 240px;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  aspect-ratio: 4/3;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
 }
 
 .plat img:hover {
@@ -250,7 +250,88 @@ body {
   color: var(--color-text);
 }
 
-/* === FOOTER === */
+/* ========== AVIS CLIENTS NOIR/ÉLÉGANT ========== */
+.avis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Carte compacte et élégante */
+.card.avis {
+  background-color: #3f5d4e; /* vert pastel foncé */
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  color: white;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ddcfa8;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Texte */
+.card.avis p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-weight: 500;
+  text-align: justify;
+  position: relative;
+  flex: 1;
+  margin: 0;
+  padding: 0.5rem 0 1.5rem;
+}
+
+/* Guillemets stylisés */
+.card.avis p::before,
+.card.avis p::after {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  color: #e1c981;
+  opacity: 0.35;
+  position: absolute;
+}
+
+.card.avis p::before {
+  content: "“";
+  top: -5px;
+  left: -5px;
+}
+
+.card.avis p::after {
+  content: "”";
+  bottom: -5px;
+  right: -5px;
+}
+
+/* Étoiles */
+.stars {
+  color: #e1c981;
+  font-size: 1.2rem;
+  margin-top: auto;
+}
+
+/* Footer */
+.card.avis footer {
+  font-weight: 600;
+  color: #ffe38d;
+  text-align: right;
+  padding-top: 0.75rem;
+  border-top: 1px solid #ddcfa8;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+}
+
+
+
+
+/* ========== FOOTER ========== */
 .footer {
   background-color: #f5f5f5;
   padding: 1.5rem;
@@ -258,54 +339,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .nav-items {
-    gap: 1rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2.4rem;
-  }
-
-  .hero-content .subheading {
-    font-size: 1.3rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .btn {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .nav-items {
-    gap: 0.5rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .nav-items {
-    display: none;
-  }
-}
-
-/* === HEADINGS === */
-h2,
-.section-title {
-  font-family: var(--font-title);
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: left;
-  color: var(--color-text);
-}
-
-
-/* === ANIMATION === */
+/* ========== ANIMATIONS ========== */
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -317,12 +351,32 @@ h2,
   }
 }
 
-.plat:nth-child(1) {
-  animation-delay: 0.1s;
+.plat:nth-child(1),
+.card.avis:nth-child(1) { animation-delay: 0.1s; }
+.plat:nth-child(2),
+.card.avis:nth-child(2) { animation-delay: 0.2s; }
+.plat:nth-child(3),
+.card.avis:nth-child(3) { animation-delay: 0.3s; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .plats-grid,
+  .avis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.plat:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.plat:nth-child(3) {
-  animation-delay: 0.3s;
+
+@media (max-width: 700px) {
+  .plats-grid,
+  .avis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content,
+  h1,
+  h2,
+  .section-title,
+  .lead {
+    margin-left: 2rem;
+  }
 }
