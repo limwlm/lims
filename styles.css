@@ -513,3 +513,7 @@ footer.footer-complet {
   border-radius: 0; /* Pas d'arrondi si l’image est déjà designée */
   box-shadow: none; /* Supprime l'ombre */
 }
+
+.title-green {
+  color: #3f5d4e; /* ou la couleur exacte de ton vert thème */
+}
