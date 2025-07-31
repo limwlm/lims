@@ -104,6 +104,7 @@ h2, .section-title {
 .navbar a {
   color: var(--color-text);
   text-decoration: none;
+  font-weight: 600;
 }
 
 .navbar-container {
@@ -187,6 +188,7 @@ h2, .section-title {
 
 .hero-content .subheading {
   font-size: 1.6rem;
+  font-weight: 500;
   font-family: var(--font-title);
   color: var(--color-hero-text);
   margin-bottom: 1rem;
@@ -196,6 +198,7 @@ h2, .section-title {
 .hero-content p {
   font-family: var(--font-title);
   font-size: 1.25rem;
+  font-weight: 550;
   line-height: 1.6;
   color: var(--color-hero-text);
   margin-bottom: 2.5rem;
@@ -397,3 +400,66 @@ h2, .section-title {
 .card.avis:nth-child(2) { animation-delay: 0.2s; }
 .plat:nth-child(3),
 .card.avis:nth-child(3) { animation-delay: 0.3s; }
+
+footer.footer-complet {
+  background-color: #2f4631;
+  color: #fdfcf9;
+  font-size: 0.75rem; /* 12px */
+  padding: 0.5rem 1rem 0.25rem;
+  line-height: 1.4;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.footer-col h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.875rem; /* 14px */
+  margin: 0 0 0.25rem;
+}
+
+.footer-col p,
+.footer-col a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  margin: 0.35rem 0;
+  text-decoration: none;
+  color: rgba(253, 252, 249, 0.8);
+  line-height: 2;
+}
+
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-col ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin: 0.15rem 0;
+}
+
+.footer-socials-inline {
+  margin-top: 0.25rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.6875rem; /* 11px */
+  padding: 0.25rem 0;
+  margin-top: 0.25rem;
+  border-top: 1px solid rgba(253, 252, 249, 0.1);
+  color: rgba(253, 252, 249, 0.5);
+}
+
