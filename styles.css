@@ -492,3 +492,24 @@ footer.footer-complet {
     font-size: 0.7rem;
   }
 }
+
+.menu-intro {
+  color: #3f5d4e; /* Ton vert secondaire habituel */
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.menu-images {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.menu-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0; /* Pas d'arrondi si l’image est déjà designée */
+  box-shadow: none; /* Supprime l'ombre */
+}
