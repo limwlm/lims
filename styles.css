@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lora&family=Libre+Baskerville:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather&display=swap');
 
 :root {
   --color-bg: #e6d8b5;
   --color-text: #2f4631;
   --color-accent: #f4c542;
   --color-hero-text: #fdfcf9;
-  --font-title: 'Libre Baskerville', serif;
+  --font-title: 'Merriweather', serif;
   --font-body: 'Inter', sans-serif;
-  --font-hero: 'Lora', serif;
 }
 
 /* ========== BASE ========== */
@@ -35,7 +34,7 @@ body {
   padding: 4rem 0;
 }
 
-/* ========== TEXTES & TITRES ========== */
+/* ========== TYPOGRAPHIE ========== */
 h1, h2, h3, .section-title, .lead {
   text-align: left;
 }
@@ -48,8 +47,7 @@ h1 {
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-h2,
-.section-title {
+h2, .section-title {
   font-family: var(--font-title);
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -57,12 +55,15 @@ h2,
 }
 
 .lead {
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 3;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2;
   font-family: var(--font-body);
   color: var(--color-text);
   margin-top: 1rem;
+  text-align: justify;
+  max-width: 65ch;
+  margin-right: auto;
 }
 
 /* ========== BOUTONS ========== */
@@ -186,14 +187,14 @@ h2,
 
 .hero-content .subheading {
   font-size: 1.6rem;
-  font-family: var(--font-hero);
+  font-family: var(--font-title);
   color: var(--color-hero-text);
   margin-bottom: 1rem;
   display: block;
 }
 
 .hero-content p {
-  font-family: var(--font-hero);
+  font-family: var(--font-title);
   font-size: 1.25rem;
   line-height: 1.6;
   color: var(--color-hero-text);
@@ -205,20 +206,34 @@ h2,
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  align-items: stretch;
 }
 
-.plat {
+@media (max-width: 1024px) {
+  .plats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .plats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card.plat {
   background-color: var(--color-bg);
   border-radius: 12px;
   padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
-.plat img {
+.card.plat img {
   width: 100%;
   height: 240px;
   object-fit: cover;
@@ -228,84 +243,112 @@ h2,
   transition: transform 0.3s ease;
 }
 
-.plat:hover {
+.card.plat:hover {
   transform: translateY(-5px) scale(1.01);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
-.plat img:hover {
+.card.plat img:hover {
   transform: scale(1.03);
 }
 
-.plat h3 {
+.card.plat h3 {
   font-size: 1.25rem;
   font-family: var(--font-title);
   margin-bottom: 0.5rem;
   color: var(--color-text);
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.plat p {
+.card.plat p {
   font-size: 1rem;
   line-height: 1.5;
   color: var(--color-text);
+  text-align: left;
+  margin-top: 0.5rem;
 }
 
-/* ========== AVIS CLIENTS NOIR/ÉLÉGANT ========== */
+/* ========== AVIS CLIENTS ========== */
+/* Grille responsive des avis */
+
 .avis-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-top: 2rem;
+  align-items: stretch;
+  width: 100%;
 }
 
-/* Carte compacte et élégante */
+@media (max-width: 1024px) {
+  .avis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .avis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Carte Avis */
 .card.avis {
-  background-color: #3f5d4e; /* vert pastel foncé */
-  border-radius: 16px;
-  padding: 1.5rem 1.25rem;
-  color: white;
-  height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
+  min-height: 26rem;
+  background-color: #3f5d4e;
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  color: white;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
   border: 1px solid #ddcfa8;
+  font-family: 'Merriweather', serif;
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Texte */
+.card.avis:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenu du témoignage */
 .card.avis p {
-  font-size: 0.92rem;
-  line-height: 1.6;
-  font-weight: 500;
+  font-size: clamp(0.95rem, 0.95rem + 0.25vw, 1.05rem);
+  line-height: 1.65;
   text-align: justify;
-  position: relative;
-  flex: 1;
+  hyphens: auto;
   margin: 0;
-  padding: 0.5rem 0 1.5rem;
+  position: relative;
+  padding: 0.5rem 0;
 }
 
 /* Guillemets stylisés */
 .card.avis p::before,
 .card.avis p::after {
   font-family: Georgia, serif;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   color: #e1c981;
-  opacity: 0.35;
+  opacity: 0.5;
   position: absolute;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .card.avis p::before {
   content: "“";
-  top: -5px;
-  left: -5px;
+  top: -1.4rem;
+  left: -0.4rem;
 }
 
 .card.avis p::after {
   content: "”";
-  bottom: -5px;
-  right: -5px;
+  bottom: -0.6rem;
+  right: -0.2rem;
 }
 
 /* Étoiles */
@@ -315,7 +358,7 @@ h2,
   margin-top: auto;
 }
 
-/* Footer */
+/* Signature client */
 .card.avis footer {
   font-weight: 600;
   color: #ffe38d;
@@ -325,11 +368,6 @@ h2,
   font-size: 0.9rem;
   margin-top: 1rem;
 }
-
-}
-
-
-
 
 /* ========== FOOTER ========== */
 .footer {
@@ -357,26 +395,3 @@ h2,
 .card.avis:nth-child(2) { animation-delay: 0.2s; }
 .plat:nth-child(3),
 .card.avis:nth-child(3) { animation-delay: 0.3s; }
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 1024px) {
-  .plats-grid,
-  .avis-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 700px) {
-  .plats-grid,
-  .avis-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-content,
-  h1,
-  h2,
-  .section-title,
-  .lead {
-    margin-left: 2rem;
-  }
-}

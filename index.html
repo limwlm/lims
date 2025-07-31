@@ -1,215 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lim’s Kitchen – Restaurant Asiatique Paris</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- NAVBAR -->
-    <header class="navbar">
-      <div class="navbar-container">
-        <a href="index.html" class="logo">Lim’s Kitchen</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lim’s Kitchen – Restaurant de Fusion Asiatique Paris</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">Lim’s Kitchen</a>
+      <nav class="nav-links">
+        <div class="nav-items">
+          <a href="menu.html">Menu</a>
+          <a href="galerie.html">Galerie</a>
+          <a href="https://maps.app.goo.gl/nnLKz7SyPyyFbdQK8" target="_blank" rel="noopener noreferrer">Itinéraire</a>
+          <a href="tel:+33171376413">Appeler</a>
+        </div>
+        <a class="btn" href="https://reservation.carbonaraapp.com/France/Paris/LIMs-Kitchen/" target="_blank" rel="noopener noreferrer">Réserver</a>
+      </nav>
+    </div>
+  </header>
 
-        <nav class="nav-links">
-          <div class="nav-items">
-            <a href="menu.html">Menu</a>
-            <a href="galerie.html">Galerie</a>
-            <a
-              href="https://maps.app.goo.gl/nnLKz7SyPyyFbdQK8"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Itinéraire</a
-            >
-            <a href="tel:+33171376413">Appeler</a>
-          </div>
-
-          <a
-            class="btn"
-            href="https://reservation.carbonaraapp.com/France/Paris/LIMs-Kitchen/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Réserver
-          </a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero" style="background-image: url('restaurant.png')">
-      <div class="overlay">
-        <div class="container">
-          <div class="hero-content">
-            <h1>
-              Saveurs d’Asie en fusion<br />
-              <span class="subheading">Entre tradition & modernité</span>
-            </h1>
-            <p>
-              🌸 Cuisine maison pleine de saveurs — tapas, raviolis, canard
-              laqué et plus…
-            </p>
-            <a class="btn" href="#">Réserver une table</a>
-          </div>
+  <!-- HERO -->
+  <section class="hero" style="background-image: url('restaurant.png')">
+    <div class="overlay">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Saveurs d’Asie en fusion<br /><span class="subheading">Entre tradition & modernité</span></h1>
+          <p>🌸 Cuisine maison pleine de saveurs — tapas, raviolis, canard laqué et plus…</p>
+          <a class="btn" href="#">Réserver une table</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PLATS SIGNATURES -->
-    <section class="section">
-      <div class="container">
-        <h2>Plats Signatures</h2>
-        <div class="plats-grid">
-          <article class="card plat">
-            <img src="plat.png" alt="Peking Duck - Canard croustillant" />
-            <h3>Peking Duck</h3>
-            <p>Canard croustillant, crêpes et sauce hoisin.</p>
-          </article>
-          <article class="card plat">
-            <img
-              src="plat1.png"
-              alt="Kung Pao Chicken - Poulet aux cacahuètes"
-            />
-            <h3>Kung Pao Chicken</h3>
-            <p>Poulet sauté aux cacahuètes et piments.</p>
-          </article>
-          <article class="card plat">
-            <img src="plat2.png" alt="Mapo Tofu - Tofu épicé" />
-            <h3>Mapo Tofu</h3>
-            <p>Tofu soyeux dans une sauce épicée et savoureuse.</p>
-          </article>
-        </div>
+  <!-- PLATS SIGNATURES -->
+  <section class="section">
+    <div class="container">
+      <h2>Plats Signatures</h2>
+      <div class="plats-grid">
+        <article class="card plat">
+          <img src="plat.png" alt="Peking Duck - Canard croustillant" />
+          <h3>Peking Duck</h3>
+          <p>Canard croustillant, crêpes et sauce hoisin.</p>
+        </article>
+        <article class="card plat">
+          <img src="plat1.png" alt="Kung Pao Chicken - Poulet aux cacahuètes" />
+          <h3>Kung Pao Chicken</h3>
+          <p>Poulet sauté aux cacahuètes et piments.</p>
+        </article>
+        <article class="card plat">
+          <img src="plat2.png" alt="Mapo Tofu - Tofu épicé" />
+          <h3>Mapo Tofu</h3>
+          <p>Tofu soyeux dans une sauce épicée et savoureuse.</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- HISTOIRE -->
-    <section class="section light">
-      <div class="container">
-        <h2>Notre Histoire</h2>
-        <p class="lead">
-          Chez Lim’s Kitchen, chaque plat est une histoire à déguster. Celle
-          d’un chef né au Cambodge, élevé dans une famille d’origine chinoise,
-          imprégné des saveurs du Vietnam et forgé par plus de 30 ans de
-          restauration en France. Aujourd’hui, au cœur du 8ᵉ arrondissement de
-          Paris, il transmet cette mémoire culinaire avec une équipe
-          thaïlandaise aussi passionnée que lui.
-        </p>
+  <!-- HISTOIRE -->
+  <section class="section light">
+    <div class="container">
+      <h2>Notre Histoire</h2>
+      <p class="lead">
+        Chez Lim’s Kitchen, chaque plat est une histoire à déguster. Celle
+        d’un chef né au Cambodge, élevé dans une famille d’origine chinoise,
+        imprégné des saveurs du Vietnam et forgé par plus de 30 ans de
+        restauration en France. Aujourd’hui, au cœur du 8ᵉ arrondissement de
+        Paris, il transmet cette mémoire culinaire avec une équipe
+        thaïlandaise aussi passionnée que lui.
+      </p>
+    </div>
+  </section>
+
+  <!-- AVIS CLIENTS -->
+  <section class="section">
+    <div class="container">
+      <h2>Avis Clients</h2>
+      <div class="plats-grid">
+        <article class="card avis">
+          <p>Alors... Allez-y les yeux fermés ! Nous sommes venus en famille afin de manger un canard laqué (Peking Duck)...</p>
+          <div class="stars">★★★★★</div>
+          <footer>Fiona Hamon</footer>
+        </article>
+        <article class="card avis">
+          <p>Superbe découverte ! Service formidable avec un patron hyper disponible et agréable ! À tester : bœuf Sichuan...</p>
+          <div class="stars">★★★★★</div>
+          <footer>Olivier Leclercq</footer>
+        </article>
+        <article class="card avis">
+          <p>TOP ! Tout est au top ! C’est succulent, fait maison, personnel très sympathique. Très bon rapport qualité-prix.</p>
+          <div class="stars">★★★★★</div>
+          <footer>Caroline Gasch</footer>
+        </article>
+        <article class="card avis">
+          <p>Très bon restaurant. Plats délicieux, ambiance agréable. Service dès 18h30 parfait avant un spectacle.</p>
+          <div class="stars">★★★★★</div>
+          <footer>Jean Louis</footer>
+        </article>
+        <article class="card avis">
+          <p>Bonne adresse dans les Champs-Élysées. Cuisine authentique, bons plats du midi, salle agréable.</p>
+          <div class="stars">★★★★★</div>
+          <footer>Olivier Dubouis</footer>
+        </article>
+        <article class="card avis">
+          <p>What a wonderful meal. The duck pancakes were superb. Highly recommend for a great Paris dining experience.</p>
+          <div class="stars">★★★★★</div>
+          <footer>Isaac Knutila</footer>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- AVIS CLIENTS -->
-    <section class="section">
-      <div class="container">
-        <h2>Avis Clients</h2>
-        <div class="avis-grid">
-          <article class="card avis">
-            <p>
-              Alors... Allez-y les yeux fermés ! Nous sommes venus en famille
-              afin de manger un canard laqué (Peking Duck). Le responsable nous
-              a suggéré des recommandations... nous l’avons écouté des entrées
-              jusqu’au dessert ! À tomber par terre ! Un régal ! Adresse à
-              retenir... merci pour votre accueil et cette très bonne soirée.
-            </p>
-            <div class="stars">★★★★★</div>
-            <footer>Fiona Hamon</footer>
-          </article>
+  <!-- CONTACT -->
+  <section class="section light">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>
+        📍 9 Rue de Ponthieu, 75008 Paris<br />
+        📞 <a href="tel:+33171376413">01 71 37 64 13</a><br />
+        🕒 Du mardi au samedi, 12h – 14h30 et 19h – 22h30
+      </p>
+      <a class="btn" href="https://reservation.carbonaraapp.com/France/Paris/LIMs-Kitchen/" target="_blank" rel="noopener noreferrer">Réserver une table</a>
+    </div>
+  </section>
 
-          <article class="card avis">
-            <p>
-              Superbe découverte ! Service formidable avec un patron hyper
-              disponible et agréable ! Cuisine mêlant cuisine chinoise
-              traditionnelle goûteuse et inspirations fusion que le chef
-              souhaite mettre en avant ! À tester : bœuf Sichuan, magret de
-              canard au curry rouge !
-            </p>
-            <div class="stars">★★★★★</div>
-            <footer>Olivier Leclercq</footer>
-          </article>
-
-          <article class="card avis">
-            <p>
-              TOP ! Tout est au top ! C’est succulent, frais, fait maison et
-              authentique. Le thé est haut de gamme, tout comme les produits. Le
-              personnel est plus que sympathique ! Quelle belle et bonne
-              surprise. Très bon rapport qualité-prix. À faire !
-            </p>
-            <div class="stars">★★★★★</div>
-            <footer>Caroline Gasch</footer>
-          </article>
-
-          <article class="card avis">
-            <p>
-              Très bon restaurant. Bien situé. Les plats cuisinés à la commande
-              (et sans glutamate) sont délicieux. L’ambiance y est très
-              sympathique. Idéal aussi pour un dîner d’avant-spectacle, car le
-              service du soir débute à 18h30. Bref, une adresse à retenir, sans
-              hésiter.
-            </p>
-            <div class="stars">★★★★★</div>
-            <footer>Jean Louis</footer>
-          </article>
-
-          <article class="card avis">
-            <p>
-              Bonne adresse dans le quartier des Champs-Élysées. Une vraie
-              cuisine asiatique, loin de ce qu'on voit dans les ‘traiteurs
-              chinois’. Un large choix dans les plats du midi. Et une salle dans
-              laquelle on est bien installé.
-            </p>
-            <div class="stars">★★★★★</div>
-            <footer>Olivier Dubouis</footer>
-          </article>
-
-          <article class="card avis">
-            <p>
-              What a wonderful meal. Our family of 5 enjoyed a well-prepared and
-              flavorful assortment of delicious Chinese food. The duck pancakes
-              were superb! The sautéed seasonal vegetables with garlic were
-              fantastic! The 5 of us agreed that the vegetable plate was worthy
-              of a must-review treasure! Highly recommend for a great Paris
-              dining experience.
-            </p>
-            <div class="stars">★★★★★</div>
-            <footer>Isaac Knutila</footer>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section light">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>
-          📍 9 Rue de Ponthieu, 75008 Paris<br />
-          📞 <a href="tel:+33171376413">01 71 37 64 13</a><br />
-          🕒 Du mardi au samedi, 12h – 14h30 et 19h – 22h30
-        </p>
-        <a
-          class="btn"
-          href="https://reservation.carbonaraapp.com/France/Paris/LIMs-Kitchen/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Réserver une table
-        </a>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container">
-        <p>© 2025 Lim's Kitchen. Tous droits réservés.</p>
-        <p>
-          <a href="#">Politique de confidentialité</a> |
-          <a href="#">Contact</a>
-        </p>
-      </div>
-    </footer>
-  </body>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Lim's Kitchen. Tous droits réservés.</p>
+      <p><a href="#">Politique de confidentialité</a> | <a href="#">Contact</a></p>
+    </div>
+  </footer>
+</body>
 </html>
