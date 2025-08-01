@@ -298,20 +298,6 @@ h2, .section-title {
 
 /* Carte Avis */
 .card.avis {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #3f5d4e;
-  border-radius: 16px;
-  padding: 1.5rem 1.25rem;
-  color: white;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid #ddcfa8;
-  font-family: 'Merriweather', serif;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  min-height: 28rem;
-  overflow: visible;
 }
 
 .card.avis:hover {
@@ -321,8 +307,9 @@ h2, .section-title {
 
 .card.avis p {
   font-size: 1.05rem;
-  line-height: 1.75;
-  text-align: left;
+  text-align: justify;
+  font-weight: 600;
+  font-style: italic;
   max-width: 100%;
   margin: 0;
   padding-left: 1.5rem; /* décalage à gauche pour laisser la place au guillemet */
@@ -357,15 +344,13 @@ h2, .section-title {
 }
 
 .avis-footer .stars {
-  font-size: 1.5rem;        /* plus grandes */
-  color: #ffd700;           /* jaune vif façon or */
+  font-size: 1.5rem;        /* plus grandes */          /* jaune vif façon or */
   letter-spacing: 0.15rem;  /* espacement équilibré */
 }
 
 
 .card.avis footer {
   font-weight: 600;
-  color: #ffe38d;
   text-align: right;
   padding-top: 0.75rem;
   border-top: 1px solid #ddcfa8;
@@ -537,3 +522,4 @@ footer.footer-complet {
   color: #3f5d4e; /* ou la couleur exacte de ton vert thème */
   padding-bottom: 3rem;
 }
+
